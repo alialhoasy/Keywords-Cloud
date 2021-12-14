@@ -8,19 +8,30 @@ for (let i = 0; i < getKeywordsCloud.length; i++) {
         link: decodeURI(getKeywordsCloud[i].href)
     });
 }
+
 // Get Colors
 var getKeywordsColors = document.querySelectorAll('.get-keywords-cloud-color span');
 let ColorArray = [];
 for (let i = 0; i < getKeywordsColors.length; i++) {
     ColorArray.push(getKeywordsColors[i].textContent);
 }
+// Execute
 jQuery(document).ready(function($) {
+
+    let keywordsshape = $('.option-keywords-shape').text(),
+        keywordsautoresize = $('.option-keywords-autoresize').text(),
+        keywordsdelay = $('.option-keywords-delay').text(),
+        keywordsfontSizefrom = $('.option-keywords-fontSizefrom').text(),
+        keywordsfontSizeto = $('.option-keywords-fontSizeto').text();
+
     $('.keywords-cloud').jQCloud(keywordArray, {
-        shape: 'rectangular',
+        shape: keywordsshape,
+        autoResize: keywordsautoresize,
+        delay: keywordsdelay,
         colors: ColorArray,
         fontSize: {
-            from: 0.1,
-            to: 0.02
+            from: keywordsfontSizefrom,
+            to: keywordsfontSizeto
         }
     });
 });
