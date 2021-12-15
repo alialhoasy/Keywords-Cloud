@@ -13,6 +13,7 @@
  * Text Domain:       keywords-cloud
  * Domain Path:       /languages
  */
+
 class Keywords_Cloud extends WP_Widget {
  
     function __construct() {
@@ -62,11 +63,11 @@ class Keywords_Cloud extends WP_Widget {
 
         // Get Option
         echo '<div style="display:none;position:absolute;">';
-            echo '<span class="option-keywords-shape">' . $instance['keywordscloudshape'] . '</span>';
-            echo '<span class="option-keywords-autoresize">' . $instance['keywordscloudautoResize'] . '</span>';
-            echo '<span class="option-keywords-delay">' . $instance['keywordsclouddelay'] . '</span>';
-            echo '<span class="option-keywords-fontSizefrom">' . $instance['keywordscloudfontSizefrom'] . '</span>';
-            echo '<span class="option-keywords-fontSizeto">' . $instance['keywordscloudfontSizeto'] . '</span>';
+            echo '<span class="option-keywords-shape">' . esc_html__($instance['keywordscloudshape'], 'text_domain' ) . '</span>';
+            echo '<span class="option-keywords-autoresize">' . esc_html__($instance['keywordscloudautoResize'], 'text_domain' ) . '</span>';
+            echo '<span class="option-keywords-delay">' . esc_html__($instance['keywordsclouddelay'], 'text_domain' ) . '</span>';
+            echo '<span class="option-keywords-fontSizefrom">' . esc_html__($instance['keywordscloudfontSizefrom'], 'text_domain' ) . '</span>';
+            echo '<span class="option-keywords-fontSizeto">' . esc_html__($instance['keywordscloudfontSizeto'], 'text_domain' ) . '</span>';
         echo '</div>';
         
 		// Count Words
@@ -80,8 +81,8 @@ class Keywords_Cloud extends WP_Widget {
     }
     public function form( $instance ) {
 
-        $title 					        = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' );
-        $keywordscloudcountwords 	    = ! empty( $instance['keywordscloudcountwords'] ) ? $instance['keywordscloudcountwords'] : esc_html__( 50, 'text_domain' );
+        $title 				= ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' );
+        $keywordscloudcountwords 	= ! empty( $instance['keywordscloudcountwords'] ) ? $instance['keywordscloudcountwords'] : esc_html__( 50, 'text_domain' );
         $keywordscloudshape             = ! empty( $instance['keywordscloudshape'] ) ? $instance['keywordscloudshape'] : esc_html__( 'rectangular', 'text_domain' );
         $keywordscloudautoResize        = ! empty( $instance['keywordscloudautoResize'] ) ? $instance['keywordscloudautoResize'] : esc_html__( 'false', 'text_domain' );
         $keywordsclouddelay             = ! empty( $instance['keywordsclouddelay'] ) ? $instance['keywordsclouddelay'] : esc_html__( 10, 'text_domain' );
@@ -96,7 +97,6 @@ class Keywords_Cloud extends WP_Widget {
         $keywordscloudcolor7 	        = ! empty( $instance['keywordscloudcolor7'] ) ? $instance['keywordscloudcolor7'] : esc_html__( '', 'text_domain' );
         $keywordscloudcolor8 	        = ! empty( $instance['keywordscloudcolor8'] ) ? $instance['keywordscloudcolor8'] : esc_html__( '', 'text_domain' );
         $keywordscloudcolor9 	        = ! empty( $instance['keywordscloudcolor9'] ) ? $instance['keywordscloudcolor9'] : esc_html__( '', 'text_domain' );
-
 
         ?>
         <p>
