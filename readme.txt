@@ -8,7 +8,7 @@ Requires PHP: 7.2
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin colors and decorates the tags and makes them more aesthetic than the default word cloud.
+To add a widget that shows the tags formatted, colored and of different sizes.
 
 == Description ==
 
