@@ -8,7 +8,7 @@ Requires PHP: 7.2
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Enables the previous "classic" editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports all plugins that extend this screen.
+This plugin colors and decorates the tags and makes them more aesthetic than the default word cloud.
 
 == Description ==
 
